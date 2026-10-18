@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Text Reader</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="app">
+        <header class="header">
+            <p class="eyebrow">VISION ASSISTANT</p>
+            <h1>Live Text Reader</h1>
+            <p class="subtitle">
+                Capture camera frames and save them to your backend.
+            </p>
+        </header>
+
+        <section class="panel">
+            <div class="section-heading">
+                <h2>Live Camera</h2>
+                <span id="cameraBadge" class="badge">Stopped</span>
+            </div>
+
+            <video id="video" autoplay playsinline muted></video>
+
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary">
+                    Start Camera
+                </button>
+                <button id="stopBtn" class="btn btn-secondary" disabled>
+                    Stop Camera
+                </button>
+            </div>
+
+            <p id="status" class="status" role="status" aria-live="polite">
+                Camera is stopped.
+            </p>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <h2>Latest Captured Frame</h2>
+                <span id="frameBadge" class="badge">No frames</span>
+            </div>
+
+            <div class="preview-box">
+                <img
+                    id="preview"
+                    alt="Latest captured camera frame"
+                    hidden
+                >
+                <p id="previewPlaceholder" class="placeholder">
+                    Your captured frame will appear here.
+                </p>
+            </div>
+
+            <div class="frame-info">
+                <span>Successfully saved</span>
+                <strong id="frameCount">0 frames</strong>
+            </div>
+            <p id="lastCapture" class="muted">
+                No frame saved yet.
+            </p>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <h2>Backend Response</h2>
+            </div>
+            <pre id="result">Waiting for the first frame...</pre>
+        </section>
+
+        <footer>
+            Frame capture interval: 5 seconds
+        </footer>
+    </main>
+</body>
+</html>
