@@ -73,6 +73,33 @@
             <pre id="result">Waiting for the first frame...</pre>
         </section>
 
+
+<section id="voice-assistant">
+  <h2>Voice Assistant</h2>
+  <p id="voiceStatus" role="status" aria-live="polite">
+    Voice assistant is off.
+  </p>
+
+  <button id="startVoiceBtn" type="button">
+    Start Voice Assistant
+  </button>
+
+  <button id="stopVoiceBtn" type="button" disabled>
+    Stop Listening
+  </button>
+
+  <p>
+    <strong>Recognized question:</strong>
+    <span id="voiceTranscript">None yet</span>
+  </p>
+
+  <p>
+    <strong>Answer:</strong>
+    <span id="voiceAnswer">No answer yet</span>
+  </p>
+</section>
+
+
         <footer>
             Frame capture interval: 5 seconds
         </footer>
